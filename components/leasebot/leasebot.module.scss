@@ -1,0 +1,139 @@
+@import "../../sass/_variables";
+
+
+/* 2532x1170 pixels at 460ppi */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .leasebot {
+        max-width: 390px !important;
+    }
+}
+
+/* 2436x1125px at 458ppi IPHONE 11 PRO */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+    .leasebot {
+        max-width: 375px !important;
+    }
+}
+
+.leasebot {
+    max-width: 400px;
+    position: fixed;
+    right: 0;
+    bottom: -120px;
+    z-index: $zindex-live-chat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &.is-open {
+        bottom: 0;
+
+        .chat-title-image {
+            position: absolute;
+            top: -300px;
+            opacity: 0;
+        }
+    }
+
+    .chat-title-image {
+        border: 4px solid #0094c6;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: -130px;
+        border-radius: 60px;
+        z-index: $zindex-live-chat;
+        box-shadow: 0 5px 3px #737373;
+        background-color: #fe9690;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        cursor: pointer;
+
+        img {
+            height: 85px;
+            width: 110px;
+            margin-top: 15px;
+            padding: 0 20px;
+        }
+    }
+
+    .chat-header-rect {
+        max-width: 100%;
+        padding: 10px 15px;
+        background-color: #0094c6!important;
+        font-size: 16px!important;
+        color: $white!important;
+        position: relative;
+        box-shadow: 0 3px 3px #737373;
+        z-index: $zindex-live-chat;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .chevron {
+            height: 20px;
+            content: url("data:image/svg+xml; utf8, <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"chevron-down\" class=\"svg-inline--fa fa-chevron-down fa-w-14\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"white\" d=\"M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z\"></path></svg>");
+            
+            &.bottom {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .chatcontainer {
+        max-width: 100%;
+        border: 1px solid #717171!important;
+        background-color: #fff;
+        border-bottom: none;
+
+        &.closed {
+            display: none;
+        }
+
+        .chatheader {
+            display: flex;
+            padding: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .conversation {
+            max-width: 100%;
+            padding: 15px!important;
+            overflow-x: hidden!important;
+            overflow-y: auto!important;
+        }
+
+        .chatform {
+            max-width: 100%;
+            background-color: #2e2e2e;
+            margin: 0!important;
+            padding: 15px!important;
+
+            input {
+                width: 100%!important;
+                font-size: 16px!important
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .leasebot {
+        right: 35px;
+        left: auto;
+    }
+}

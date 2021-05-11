@@ -1,0 +1,38 @@
+@import "../../../sass/_variables";
+
+.countdown {
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+
+    &.countdown-bf {
+
+        div {
+            background: transparent;
+        }
+    }
+
+    & > div {
+        margin: 0 0 0 5px;
+        padding: 10px 0px;
+        background: $lo-charcoal;
+        display: inline-block;
+
+        span {
+            padding: 5px 15px;
+            display: inline-block;
+            background: linear-gradient(to bottom, #f2f6f8 0%,#d8e1e7 50%,#c8d3d9 51%,#f2f9fe 100%);
+            color: #b20202;
+            font-weight: 700;
+        }
+
+        div {
+            font-size: 0.75rem;
+            background: #b20202;
+            font-weight: 700;
+            padding: 5px 0;
+        }
+    }
+}

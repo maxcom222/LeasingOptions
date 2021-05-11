@@ -1,0 +1,177 @@
+@import "../../../sass/_variables";
+
+
+.card-manufacturer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+    padding: 0 0 20px 0;
+    background: #fff;
+
+    &.card-manufacturer--atc {
+        &:hover, &:focus, &:active {
+            box-shadow: 0px 5px 10px #bdbdbd;
+        }
+    }
+
+    .card-manufacturer__top {
+        width: 100%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    &:hover, &:focus, &:active {
+        box-shadow: 0 5px 10px #524e4e;
+    }
+
+    .card-manufacturer__atc {
+        width: 100%;
+        position: relative;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #12314B;
+        padding: 10px 15px;
+
+        img {
+            width: auto;
+            max-height: 20px;
+        }
+    }
+
+    .card-manufacturer__img {
+        width: 100%;
+        min-height: 230px;
+        max-height: 230px;
+        position: relative;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        .insured-badge {
+            max-width: 65px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-manufacturer__content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 20px;
+        background: #fff;
+    }
+
+    .card-manufacturer__derivative {
+        width: 100%;
+        position: relative;
+        font-weight: 700;
+        font-size: .85rem;
+        color: $lo-blue;
+    }
+
+    .personal-deal, .business-deal {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 0 20px 0;
+    }
+
+    .card-manufacturer__details {
+        width: 100%;
+        position: relative;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 0;
+                margin: 0 0 3px;
+                display: block;
+                color: #3a3a3a;
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .card-manufacturer__price {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            color: #000;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 25px;
+        }
+    }
+
+    .card-manufacturer__maintenence {
+        width: 100%;
+        position: relative;
+        margin: 0 0 30px;
+
+        img {
+            width: auto !important;
+            max-height: 30px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 700;
+            color: #12314B;
+        }
+    }
+
+    .card-manufacturer__bottom {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        padding: 0 20px;
+    }
+}
+
+.slick-initialized {
+
+    .card-manufacturer {
+        width: 100%;
+        width: calc(100% - 20px);
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .card-manufacturer {
+        margin: 0 0 30px 0;
+    }
+}

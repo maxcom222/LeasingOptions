@@ -1,0 +1,63 @@
+@import "../../../sass/variables";
+
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.pagination--light {
+
+        ul {
+
+            li {
+
+            
+                button, a {
+
+                    &.is-active, &:hover {
+                        background: $lo-atc;
+                    }
+                }
+            }
+        }
+    }
+    
+    span {
+        margin: 0 10px 0 0;
+        color: #3A3B3A;
+        line-height: 38px;
+        font-weight: 700;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        float: right;
+
+        li {
+            padding: 0;
+            margin: 0 5px;
+            display: inline-block;
+        
+            button, a {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #E0E0E0;
+                color: #3A3B3A;
+                font-size: 14.8px;
+                line-height: 16px;
+                font-weight: 700;
+                width: 40px;
+                height: 40px;
+                border: 0;
+
+                &.is-active, &:hover {
+                    background-color: #0094c6;
+                    color: $white;
+                }
+            }
+        }
+    }              
+}

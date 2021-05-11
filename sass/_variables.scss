@@ -1,0 +1,166 @@
+/*  ==========================================================================
+    https://raw.githubusercontent.com/twbs/bootstrap-sass/master/assets/stylesheets/bootstrap/_variables.scss
+    ==========================================================================  */
+
+/*  ==========================================================================
+    Grid
+    ==========================================================================  */
+
+	// Grid breakpoints
+	//
+	// Define the minimum dimensions at which your layout will change,
+	// adapting to different screen sizes, for use in media queries.
+	$grid-breakpoints: (
+	  xs: 0,
+	  sm: 768px,
+	  md: 1024px,
+	  lg: 1200px,
+	  xl: 1400px,
+	) !default;
+
+	$screen-xs: 480px !default;
+	$screen-ml: 667px !default;
+	$screen-sm: 768px !default;
+	$screen-md: 1024px !default;
+	$screen-lg: 1200px !default;
+	$screen-xl: 1400px !default;
+
+	// Grid containers
+	//
+	// Define the maximum width of `.container` for different screen sizes.
+	$container-max-widths: (
+	  sm: 724px,
+	  md: 992px,
+	  lg: 1140px,
+	  xl: 1300px,
+	) !default;
+
+	$grid-columns:             24 !default;
+	$grid-gutter-width: 	   30px !default;
+
+/*  ==========================================================================
+    Colours
+    ==========================================================================  */
+	
+	$primary:   #0094C6 !default;
+	$secondary: #333333 !default;
+	$success:    #39ac33 !default;
+	$danger:     #e5332d !default;
+	$warning:   orange !default;
+	$info:      #000000 !default;
+	$light:      #dcdcdc !default;
+	$dark:       #000000 !default;
+	$white:     #ffffff !default;
+
+	$text-color: #000000;
+	$lo-body-text: #333333;
+    $lo-black: #000;
+	$lo-blue: #0094C6;
+	$lo-aqua: #2ed5c8;
+	$lo-mint: #0a676b;
+    $lo-drop: #f8f8f8;
+    $lo-grey: #f2f2f2;
+    $lo-border: #e6e6e6;
+    $lo-background: #ededed;
+    $lo-shadow: #bdbdbd;
+    $lo-charcoal: #3b3b3b;
+    $lo-navbar: #1D1D1F;
+    $lo-header: #2E3238;
+    $lo-footer: #1D1D1F;
+	$lo-slideup: #2e2e2e;
+	$lo-special: #2b2b2b;
+    $lo-placeholder: #ACACAC;
+    $lo-purple: #B800AA;
+    $lo-pink: #E6008A;
+    $lo-navy: #061D92;
+	$lo-royal: #011F59;
+	$lo-atc: #033c56;
+	$lo-atc-table: #026299;
+    $lo-default: #2A3D5D;
+	$lo-insured: #00B7E2;
+	$lo-number-plate: #e1b638;
+	$tp-green: #00b67a;
+	$tp-text: #191919;
+	$light-grey: #f0f0f0;
+	$mid-grey: #d6d6d6;
+    $dark-grey: #8e8e8e;
+    $funder-grey: #F3F3F6;
+    $lo-muted: #484848;
+
+	$lo-tag-teal: #009892;
+    $lo-tag-navy: #012958;
+    $lo-tag-grey: #FCFCFC;
+    $lo-tag-aqua: #007793;
+    $lo-tag-blue: #006BB1;
+    $lo-tag-red: #AC0021;
+    $lo-tag-pink: #820098;
+    $lo-tag-purple: #480B7E;
+    $lo-tag-green: #1A7B4E;
+
+/*  ==========================================================================
+    Typography
+    ==========================================================================  */
+
+	$font-family-sans-serif:   'Poppins', sans-serif !default;
+	$font-family-serif:        Georgia, Times New Roman, serif !default;
+
+	$font-family-monospace:    Menlo, Monaco, Consolas, "Courier New", monospace !default;
+	$font-family-base:         $font-family-sans-serif !default;
+
+	$font-size-base:           0.86rem !default;
+	$font-size-large:          ceil(($font-size-base * 1.25)) !default;
+	$font-size-small:          ceil(($font-size-base * 0.85)) !default;
+
+	$font-size-h1:             floor(($font-size-base * 2.8)) !default;
+	$font-size-h2:             floor(($font-size-base * 2.5)) !default;
+	$font-size-h3:             ceil(($font-size-base * 2)) !default;
+	$font-size-h4:             ceil(($font-size-base * 1.2)) !default;
+	$font-size-h5:             ceil(($font-size-base * 1)) !default;
+	$font-size-h6:             ceil(($font-size-base * 0.85)) !default;
+
+	$line-height-base:         1.428571429 !default;
+	$line-height-computed:     floor(($font-size-base * $line-height-base)) !default;
+
+	$headings-font-family:     inherit !default;
+	$headings-font-weight:     500 !default;
+	$headings-line-height:     1.1 !default;
+	$headings-color:           inherit !default;
+
+/*  ==========================================================================
+    Padding
+    ==========================================================================  */
+	
+	$padding-base-vertical:    6px !default;
+	$padding-base-horizontal:  12px !default;
+	$padding-large-vertical:   10px !default;
+	$padding-large-horizontal: 16px !default;
+	$padding-small-vertical:   5px !default;
+	$padding-small-horizontal: 10px !default;
+	$padding-xs-vertical:      1px !default;
+	$padding-xs-horizontal:    5px !default;
+
+/*  ==========================================================================
+    Z-index
+    ==========================================================================  */
+
+	$zindex-navbar:           1000 !default;
+	$zindex-dropdown:         1000 !default;
+	$zindex-popover:          1060 !default;
+	$zindex-tooltip:          1070 !default;
+	$zindex-arrow:            1080 !default;
+    $zindex-navbar-fixed:     1030 !default;
+    $zindex-results-blocker:  2000 !default;
+    $zindex-live-chat:        2070 !default;
+    $zindex-loading-bar:      2080 !default;
+    $zindex-slide-up:         3000 !default;
+    $zindex-cta-bar:          3050 !default;
+	$zindex-fullscreen:       4000 !default;
+	$zindex-modal-background: 4040 !default;
+    $zindex-modal:            4060 !default;
+    $zindex-modal-ouibounce:  4080 !default;
+
+/*  ==========================================================================
+    Images
+	==========================================================================  */	
+	
+	$img-ratio:				  66.66% !default; // 3:2 Aspect Ratio	

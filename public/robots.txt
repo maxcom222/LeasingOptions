@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /ScriptResource.axd  
+Disallow: /WebResource.axd  
+Disallow: /manufacturers/
+Disallow: /history/
+Disallow: /models/
+Disallow: /specialdeal*
+Disallow: /none/
+Disallow: /car-leasing/search*
+Disallow: /van-leasing/search*
+Disallow: /search2/
+Disallow: /news/tags/
+Disallow: /news/year/
+Disallow: /UserControls/Frontend/
+Disallow: /downloads/
+Disallow: */quote
+Disallow: /*?bodytypemodels=*
+Disallow: /*?gear=*
+Disallow: /*?fuel=*
+Disallow: /car-leasing-with-insurance/*
+Disallow: /api/*
+
+Noindex: /car-leasing-with-insurance/*
+
+Sitemap: https://www.leasingoptions.co.uk/sitemap.xml

@@ -1,0 +1,21 @@
+@import "../../../sass/_variables";
+
+
+.newsletter {
+
+    h3 {
+        margin: 0 0 20px 0;
+        font-size: 18px !important;
+        line-height: 21px;
+        color: $lo-black;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .newsletter {
+
+        h3 {
+            margin: 0 20px 0 0;
+        }
+    }
+}

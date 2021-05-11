@@ -1,0 +1,180 @@
+@import "../../../sass/_variables";
+
+
+.card-model {
+
+    .image {
+        border-bottom: 1px solid $light;
+    }
+
+    .summary {
+        border-bottom: 1px solid $light;
+    }
+    
+    h3 {
+        margin: 0;
+    }
+
+    h4 {
+        color: $lo-blue;
+        margin: 0;
+    }
+
+    .stickers {
+        min-height: 30px;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 10px 0 0 0;
+    }
+
+    .options {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        li {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: $lo-blue;
+                margin-right: 5px;
+
+                path {
+                    fill: $lo-blue;
+                }
+            }
+        }
+    }
+
+    .info {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 10px;
+            font-weight: 400;
+            text-align: left;
+
+            mark {
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 26px;
+            right: 15px;
+            cursor: pointer;
+        }
+
+        select {
+            border: 0;
+            color: $lo-blue;
+            font-weight: 700;
+            box-shadow: 0 1px 6px rgba(18,18,18,.4);
+            margin-right: 5px;
+        }
+    }
+
+    .internal {
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin: 10px 5px 10px 0;
+            fill: red;
+            
+            path {
+                fill: red;
+            }
+        }
+    }
+
+    .price {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            margin: 0 0 30px 0;
+            padding: 0;
+
+            span {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            small {
+                font-size: 80%;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) and (orientation: portrait) {
+    .card-model {
+
+        .price {
+
+            p {
+
+                span {
+                    font-size: 48px;
+                }
+            }
+        }
+
+        .options {
+            display: block;
+            padding-bottom: 0;
+
+            li {
+                width: 48%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 10px 0 0 0;
+                font-size: 18px;
+
+                svg {
+                    margin: 0 5px 5px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+    .card-model {
+
+        .info {
+            border-bottom: 1px solid $light;
+        }
+
+        .image, .summary, .info {
+            border-bottom: 0;
+            border-right: 1px solid $light;
+        }
+    }
+}

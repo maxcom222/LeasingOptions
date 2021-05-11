@@ -1,0 +1,72 @@
+
+@import "../../../sass/_variables";
+
+
+.card-key {
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 0 0 15px 0;
+    padding: 0;
+    background: #fff;
+
+    &:hover, &:focus, &:active {
+        box-shadow: 0px 5px 10px #bdbdbd;
+    }
+
+    .card-key__header {
+        width: 100%;
+        position: relative;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #12314B;
+        padding: 10px 15px;
+
+        img {
+            width: auto;
+            max-height: 20px;
+        }
+    }
+
+    .card-key__features {
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h4 {
+            color: #000;
+            font-weight: 700;
+        }
+
+        ul {
+            margin: 0 0 20px 0;
+
+            li {
+                padding-bottom: 5px;
+                color: #3a3a3a;
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: 700;
+
+                svg {
+                    display: inline-block;
+                    margin: 0 10px 0 0;
+                    font-size: 18px;
+                    color: #00A8D3;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .card-key {
+        margin: 0 0 30px 0;
+    }
+}

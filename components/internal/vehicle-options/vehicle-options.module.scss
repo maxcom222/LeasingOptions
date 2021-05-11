@@ -1,0 +1,39 @@
+@import "../../../sass/_variables";
+
+
+.internal-options {
+    position: relative;
+    margin-bottom: 15px;
+
+    &.is-active {
+
+        .internal-options__info {
+            display: block;
+        }
+    }
+
+    .internal-options__header {
+        position: relative;
+        padding: 15px;
+        font-weight: 500;
+        background-color: #033c56;
+        color: $white;
+        cursor: pointer;
+    }
+
+    .internal-options__info {
+        position: relative;
+        display: none;
+        padding: 8px;
+        background: $light-grey;
+        border: 1px solid #033c56;
+
+        svg {
+            fill: $danger;
+
+            path {
+                fill: $danger;
+            }
+        }
+    }
+}

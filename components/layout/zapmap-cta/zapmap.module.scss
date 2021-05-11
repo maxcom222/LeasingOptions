@@ -1,0 +1,17 @@
+@import "../../../sass/_variables";
+
+
+.zapmap-cta {
+    width: calc(100% + 30px);
+    margin: 0 -15px 30px -15px;
+    background-color: rgba(0, 0, 0, 0.3)!important;
+    padding: 50px;
+}
+
+@media screen and (min-width: $screen-md) {
+    .zapmap-cta {
+        width: fit-content;
+        margin: 0 auto 30px auto;
+        padding: 50px 100px;
+    }
+}

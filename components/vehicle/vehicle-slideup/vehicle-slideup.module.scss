@@ -1,0 +1,57 @@
+@import "../../../sass/_variables";
+
+
+.vehicle-slideup {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: $zindex-slide-up;
+    transition: all 1s ease-in-out;
+    background: $lo-slideup;
+
+    p {
+        font-size: 11px;
+    }
+
+    .panel-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        background: transparent;
+        border:0;
+        font-weight: bold;
+        color: #464646;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .2;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .vehicle-price {
+        font-size: 40px;
+        line-height: 38px; 
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .vehicle-slideup {
+
+        p {
+            font-size: 100%;
+        }
+
+        .vehicle-price {
+            font-size: 42px;
+            line-height: 40px; 
+        }
+
+        .btn {
+            min-width: 260px;
+        }
+    }
+}

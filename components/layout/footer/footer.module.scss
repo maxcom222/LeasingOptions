@@ -1,0 +1,118 @@
+@import "../../../sass/_variables";
+
+
+.partner-hover {
+    max-width: 70px;  
+    position: relative;
+    margin: 0 8px 15px 8px;
+
+    a {
+        position: relative;
+        display: block;
+    }
+
+    &:hover, &:focus {
+
+        .partner-hover__logo.partner-hover__colour {
+            opacity: 1;
+            transition: all .1s ease-in-out;
+        }
+    }
+
+    .partner-hover__logo {
+
+        &.partner-hover__mono {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        &.partner-hover__colour {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .partner-hover {
+        max-width: 100px;
+        margin: 0 25px 20px 25px;
+    }
+}
+
+.footer {
+    background: #343434!important;
+    color: $white;
+
+    .footer__col {
+
+        h2 {
+            font-size: 30px;
+            color: #2ed5c8;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: $white;
+        }
+
+        a {
+            color: $white
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: block;
+
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .footer__social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 20px;
+
+        li {
+            display: inline-block;
+            padding-right: 20px;
+            
+            a {
+                display: block;
+
+                svg {
+                    width: 28px;
+                    height: 28px;
+                    fill: #2ed5c8;
+
+                    path {
+                        fill: #2ed5c8; 
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__disclaimer {
+
+        p {
+            font-size: 12px;
+            padding-top: 20px;
+
+            a {
+                color: $white
+            }
+        }
+    }
+}

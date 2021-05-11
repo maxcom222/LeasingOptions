@@ -1,0 +1,21 @@
+<svg width="36" height="144" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#b2b2b2;stroke-miterlimit:10;}.cls-2{fill:#f1f1f1;}.cls-3{fill:#23c740;}</style>
+ </defs>
+ <title>chk-1-36x36-1</title>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="38" height="146" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle class="cls-1" cx="18" cy="18" r="15.96" id="svg_1"/>
+  <circle class="cls-1" cx="18" cy="54" r="15.96" id="svg_2"/>
+  <circle class="cls-2" cx="18" cy="90" r="15.96" id="svg_3"/>
+  <circle class="cls-2" cx="18" cy="126" r="15.96" id="svg_4"/>
+  <circle class="cls-3" cx="18" cy="54" r="9.89" id="svg_5"/>
+  <circle class="cls-3" cx="18" cy="126" r="9.89" id="svg_6"/>
+  <ellipse ry="10" rx="10" id="svg_8" cy="18" cx="18" stroke-opacity="null" stroke-width="null" stroke="null" fill="#b2b2b2"/>
+  <ellipse ry="10" rx="10" id="svg_10" cy="90.162079" cx="18" stroke-opacity="null" stroke-width="null" stroke="null" fill="#b2b2b2"/>
+ </g>
+</svg>

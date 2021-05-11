@@ -1,0 +1,16 @@
+﻿.privacy-agreement {
+    label {
+        margin-bottom: 0 !important;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    input[type=checkbox] {
+        height: 30px;
+        width: 30px;
+    }
+
+    label.invalid-feedback {
+        color: #e5332d;
+    }
+}

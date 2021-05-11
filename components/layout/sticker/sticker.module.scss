@@ -1,0 +1,54 @@
+@import "../../../sass/_variables";
+
+
+/*  ==========================================================================
+    Sticker
+    ========================================================================== */
+
+    .sticker {
+        position: relative;
+        display: inline-block;
+
+        .sticker__btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px 8px 0;
+            color: #ffffff;
+            border: 2px solid #a9277a;
+            background-color: #a9277a;
+            font-weight: bold;
+            padding: 2px 33px 2px 7px;
+            font-size: 12px;
+            cursor: pointer;
+
+            &.sticker__btn--bf {
+                background: #000;
+                border-color: #000;
+            }
+        
+            svg {
+                width: 27px;
+                height: 27px;
+                position: absolute;
+                top: -2px;
+                right: -2px;
+                bottom: -2px;
+                margin: 0;
+                padding: 5px 8px;
+                background: rgba(0,0,0,0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+            }
+        }
+    }  
+
+    @media screen and  (min-width: $screen-md) {
+        
+        .sticker {
+            font-size: .75rem;
+        }
+    }

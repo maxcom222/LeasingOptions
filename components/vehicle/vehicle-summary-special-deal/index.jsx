@@ -1,0 +1,1 @@
+export { default } from './vehicle-summary-special-deal';

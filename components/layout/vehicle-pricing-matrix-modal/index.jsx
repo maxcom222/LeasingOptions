@@ -1,0 +1,1 @@
+export { default } from './vehicle-pricing-matrix-modal';

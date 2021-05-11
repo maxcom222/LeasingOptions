@@ -1,0 +1,19 @@
+@import "../../sass/_variables";
+
+
+.liveChatLink {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: $zindex-live-chat;
+    padding: 5px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: $lo-blue;
+    color: $white;
+    cursor: pointer;
+    user-select: none;
+}

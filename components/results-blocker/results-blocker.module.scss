@@ -1,0 +1,51 @@
+@import "../../sass/_variables";
+
+.results-blocker {
+    position: relative;
+    min-height: 100px;
+
+    &.results-blocker--loading {
+
+        .results-blocker__overlay {
+            display: flex;
+        }
+    }
+
+    .results-blocker__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $zindex-results-blocker;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0, 0.5);
+        display: none;
+
+        svg {
+            width: 60px!important;
+            height: 60px;
+            position: relative;
+            fill: $white;
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .results-blocker {
+        min-height: 180px;
+
+        .results-blocker__overlay {
+
+            svg {
+                width: 80px!important;
+                height: 80px;
+            }
+        }
+    }
+}

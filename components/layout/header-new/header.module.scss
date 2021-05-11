@@ -1,0 +1,355 @@
+@import "../../../sass/_variables";
+
+
+/*  ==========================================================================
+    Header
+    ========================================================================== */
+
+.header {
+    width: 100%;
+    height: 140px;
+    position: relative;
+
+    &.is-scrolled, &.is-search {
+
+        .head-bar .head-bar__search .input-wrapper {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header {
+        height: 41px;
+
+        &.is-scrolled, &.is-search {
+            height: 87px;
+
+            .head-bar {
+                height: 87px;
+            }
+        }
+    }
+}
+
+.head-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 41px;
+    background-color: $lo-navbar;
+    z-index: 2060;
+    box-shadow: 0 0 3px #4b4b4b;
+
+    .head-bar__row {
+        padding: 10px 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head-bar__col {
+        height: 21px;
+        padding: 0;
+
+        svg {
+            width: 21px;
+            height: 21px;
+            fill: $white;
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    .head-bar__ql {
+
+        padding-inline-start: unset;
+        margin-inline-end: unset;
+        margin-inline-start:unset;
+        margin-block-end:unset;
+        margin-block-start: unset;
+        
+        li {
+            margin-right: 15px;
+
+            a {
+                display: block;
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .head-bar__search {
+        height: auto;
+        position: relative;
+        margin-top: 10px;
+
+        .input-wrapper {
+            width:100%;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            opacity: 0;
+
+            input, .input-icon {               
+                display: inline-flex;
+            }
+
+            input {
+                width: 100%;
+                position: relative;
+                z-index: 1;
+                background-color: #EFF3F5;
+                border: 0;
+                padding: 3px 10px 3px 35px;
+                outline: none;
+                font-size: 14px;
+                font-style: italic;
+                color: #6B767B;
+                text-align: center;
+
+                &:focus {
+                    border-left: 5px solid $primary;
+                }
+
+                &::-webkit-input-placeholder {
+                    color: #6B767B !important;
+                }
+
+                &::-moz-placeholder {
+                    color: #6B767B !important;
+                }
+
+                &:-ms-input-placeholder {
+                    color: #6B767B !important;
+                }
+
+                &:-moz-placeholder {
+                    color: #6B767B !important;
+                }
+            }
+
+            .input-icon {
+                position: absolute;
+                top: 7px;
+                left: 10px;
+                z-index: 3;
+                background-color: transparent;
+                border: 0;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    fill: $lo-body-text;
+
+                    path {
+                        fill: $lo-body-text;
+                    }
+                }
+            }
+
+            .input-loading {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 7px;
+                right: 43px;
+                z-index: 2;
+            }
+
+            .input-list {
+                max-height: 350px;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                z-index: $zindex-dropdown;
+                display: none;
+                background: $white;
+                border: 1px solid #c5c5c5;
+                overflow-y: auto;
+
+                &.is-active {
+                    display: block;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                        display: block;
+
+                        a {
+                            display: block;
+                            padding: 5px 10px;
+                            font-weight: normal;
+                            color: $lo-body-text;
+                            text-decoration: none;
+
+                            &:hover {
+                                background: $lo-blue;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .head-bar__sub {
+
+        > li {
+            position: relative;
+            margin: 0 0 0 10px;
+            padding: 5px;
+
+            &.head-bar__dd {
+
+                &:hover {
+
+                    .lvl-caption {
+
+                        svg {
+                            top: 2px;
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .sub-lvl {
+                        display: block;
+                    }
+                }
+            }
+
+            a {
+                font-size: 12px;
+                color: $white;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover {
+                    color:$lo-blue;
+                }
+            }
+
+            .lvl-caption {
+                position: relative;
+                padding-right: 25px;
+                font-size: 12px;
+                color: $white;
+                font-weight: bold;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 3px;
+                    right: 0;
+                    fill: $lo-blue;
+
+                    path {
+                        fill: $lo-blue;
+                    }
+                }
+            }
+
+            .sub-lvl {
+                display: none;
+                width: 200px;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin: 1px 0 0 0;
+                z-index: 2050;
+                box-shadow: 0 0 3px #4b4b4b;
+
+                .sub-nav {
+                    background-color: $lo-drop;
+
+                    li {
+                        width: 100%;
+                        height: 50px;
+                        margin: 0;
+                        line-height: 50px;
+                        border-bottom: 1px solid $lo-border;
+                        font-weight: 700;
+                        color: #000;
+                        text-align: left;
+
+                        a {
+                            padding: 0 30px 0 20px;
+                            color: inherit;
+                            font-weight: inherit;
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            cursor: pointer;
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 14px;
+                            font-weight: 700;
+
+                            &:hover {
+                                color:$lo-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #head-bar__toggle {
+        text-decoration: none;
+
+        svg {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            fill: $white;
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        height: 86px;
+    }
+
+    .head-bar {
+        height: 46px;
+        background-color: $lo-header;
+
+        .head-bar__row {
+            padding: 0 15px;
+        }
+
+        .head-bar__col {
+            height: 46px;
+        }
+
+        .head-bar__search {
+            margin-top: 0;
+
+            .input-wrapper {
+                //opacity: 1;
+    
+                input {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

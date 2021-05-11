@@ -1,0 +1,47 @@
+@import "../../../sass/_variables";
+
+.page-subnav {
+    background: $lo-charcoal;
+
+    overflow: auto;
+    white-space: nowrap;
+
+    a {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        padding: 10px 0;
+        border-top: 4px solid $lo-charcoal;
+        border-bottom: 4px solid $lo-charcoal;
+        color: #B1B1B1;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active, &.is-active {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &:active, &.is-active {
+            border-bottom-color: $lo-blue;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .page-subnav {
+        text-align: center;
+
+        a {
+            margin: 0 20px;
+            padding: 10px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+
+@import "../../../sass/_variables";
+
+
+.card-vehicle {
+    width: calc(100% - 20px);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 10px 20px 10px;
+    padding: 0 0 20px 0;
+    background: #fff;
+    box-shadow: 0 5px 10px #bdbdbd;
+    border-top: 1px solid $lo-grey;
+
+    &:hover, &:focus, &:active {
+        box-shadow: 0 5px 10px #524e4e;
+    }
+
+    .card-vehicle__top {
+        width: 100%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .card-vehicle__header {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        display: inline-flex;
+        line-height: 40px;
+        text-align: left;
+        font-weight: 700;
+        padding: 0 15px 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #d6d6d6;
+
+        span {
+            position: relative;
+            z-index: 2;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:before {
+            width:80%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            content: "";
+            background: $text-color;
+        }
+
+        &:after {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 80%;
+            z-index: 1;
+            content: "";
+            border-style: solid;
+            border-width: 20px 0 20px 20px;
+            border-color: transparent transparent transparent $text-color;
+        }
+    }
+
+    .card-vehicle__img {
+        width: 100%;
+        min-height: 230px;
+        max-height: 230px;
+        position: relative;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-vehicle__content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 20px;
+        background: #fff;
+    }
+
+    .card-vehicle__derivative {
+        width: 100%;
+        position: relative;
+        font-weight: 700;
+        font-size: .85rem;
+        color: $lo-blue;
+    }
+
+    .personal-deal, .business-deal {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 0 20px 0;
+    }
+
+    .card-vehicle__details {
+        width: 100%;
+        position: relative;
+
+        ul {
+            margin: 0;
+            padding :0;
+            list-style: none;
+
+            li {
+                padding: 0;
+                margin: 0 0 3px;
+                display: block;
+                color: #3a3a3a;
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .card-vehicle__price {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            color: #000;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 25px;
+        }
+    }
+
+    .card-vehicle__bottom {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        padding: 0 20px;
+    }
+}

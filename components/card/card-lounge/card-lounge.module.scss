@@ -1,0 +1,70 @@
+@import "../../../sass/_variables";
+
+
+.card-lounge {
+    width: 100%;
+    width: calc(100% - 30px);
+    margin: 0 15px 15px 15px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.33);
+
+    .card-lounge__header {
+        width: 100%;
+        position: relative;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        text-align: left;
+        font-weight: 700;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $text-color;
+    }
+
+    .card-lounge__img {
+        width: 100%;
+        position: relative;
+
+        img {
+            min-width: 100%;
+        }
+    }
+
+    .card-lounge__content {
+        width: 100%;
+        position: relative;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #383838;
+        font-weight: 500;
+        min-height: 320px;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        h6 {
+
+        }
+
+        p {
+            color: #383838;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .card-lounge {
+        width: 100%;
+        width: calc(100% - 30px);
+    }
+}

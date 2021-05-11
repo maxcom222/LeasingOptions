@@ -1,0 +1,108 @@
+@import "../../../sass/_variables";
+
+.page-faqs {
+
+    .h3 {
+        margin: 0 0 40px 0;
+        color: $lo-black;
+    }
+    
+    .page-faqs__col {
+        padding-bottom: 30px;
+        text-align: center;
+
+        h4 {
+            width: auto;
+            position: relative;
+            display: inline-block;
+            margin: 0 0 30px 0;
+            padding: 0 0 5px 0;
+            color: $lo-black;
+            border-bottom: 2px solid #009892;
+        }
+    }
+    
+    .page-faqs__cta {
+        padding-top: 30px;
+
+        .btn {
+            border-radius: 0;
+            padding: 5px 60px;
+        }
+    }
+
+    .faq-accordion {
+        width: 100%;
+        position: relative;
+        background: #ededed;
+        border: 1px solid #e6e6e6;
+        margin: 0 0 10px 0;
+
+        &.is-active {
+
+            .faq-accordion__content {
+                display: block;
+            }
+        }
+
+        .faq-accordion__toggle {
+            width: 100%;
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 10px 40px 10px 10px;
+            color: $lo-black;
+            text-align: left;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+        
+            &:hover {
+                color: #0094c6;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                margin: -11px 0 0 0;
+                font-size: 25px;
+                fill: #0094c6;
+            }
+        }
+
+        .faq-accordion__content {
+            width: 100%;
+            position: relative;
+            display: none;
+            padding: 10px;
+            text-align: left;
+        }
+    }
+}
+
+
+@media screen and (min-width: $screen-md) {
+
+    .page-faqs {
+        
+        .page-faqs__col {
+            padding-bottom: 0;
+        }
+
+        .faq-accordion {
+            
+            .faq-accordion__toggle {
+                padding: 10px 70px 10px 40px;
+                border-color: #d7d7d7;
+
+                svg {
+                    right: 40px;
+                }
+            }
+
+            .faq-accordion__content {
+                padding: 10px 40px;
+            }
+        }
+    }
+}

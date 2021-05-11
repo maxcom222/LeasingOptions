@@ -1,0 +1,111 @@
+@import "_variables";
+
+.birthday-col {
+    width: calc(100% - 30px)!important;
+    position: relative;
+    margin: 0 15px;
+    padding: 15px;
+
+    &.birthday-col--old {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f5ef+0,e2dbcd+100 */
+        background: rgb(245,245,239); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgb(245,245,239) 0%, rgb(226,219,205) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgb(245,245,239) 0%,rgb(226,219,205) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgb(245,245,239) 0%,rgb(226,219,205) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5ef', endColorstr='#e2dbcd',GradientType=0 ); /* IE6-9 */
+    }
+
+    &.birthday-col--new {
+        background-color: #F5F5F5;
+    }
+
+    .birthday-col__header {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        font-weight: bold;
+        color: #3B3B3B;
+        border-bottom: 1px solid #3B3B3B;
+
+        img {
+            max-height: 26px;
+        }
+    }
+
+    .birthday-col__content {
+        width: 100%;
+        position: relative;
+
+        .birthday-col__img {
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px;
+
+            img {
+                min-width: 100%;
+            }
+        }
+
+        .birthday-col__info {
+            width: 100%;
+            position: relative;
+            
+            table {
+                width: 100%;
+                border-top: 1px solid $lo-black;
+                margin: 0 0 1.15rem 0;
+
+                tr {
+
+                    td {
+                        padding: 5px;
+                        border-left: 1px solid $lo-black;
+                        border-right: 1px solid $lo-black;
+                        border-bottom: 1px solid $lo-black;
+                        text-align: center;
+
+                        &:first-child {
+                            border-right: 0;
+                        }
+
+                        &:last-child {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .birthday-col {
+        height: 100%;
+        display: flex;
+        padding: 20px 30px;
+
+        .birthday-col__header {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .birthday-col__content { 
+            display: flex;
+            flex-wrap: wrap;
+            
+            .birthday-col__img {
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-bottom: 0;
+            }
+    
+            .birthday-col__info {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 0 0 20px;
+            }
+        }
+    }
+}

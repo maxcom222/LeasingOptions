@@ -1,0 +1,64 @@
+@import "../../../sass/_variables";
+
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+
+    &.active {
+
+        .btn {
+            .btn-label {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .drop-down__menu {
+            display: block;
+        }
+    }
+
+    .drop-down__menu {
+        min-width: 100%;
+        max-height: 300px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $zindex-dropdown;
+        overflow-y: auto;
+        display: none;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        background-color: $white;
+        color: $text-color;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: .25rem;
+        box-shadow: -1px 0 12px 9px rgba(0,0,0,.15);
+
+        a, button {
+            display: block;
+            width: 100%;
+            padding: .25rem 1.5rem;
+            clear: both;
+            font-weight: 400;
+            color: $text-color;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+
+            &:hover, &:focus, &:active, &.is-active {
+                background-color: $light-grey;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .drop-down {
+            
+        .drop-down__menu {
+            box-shadow: none;
+        }
+    }
+}

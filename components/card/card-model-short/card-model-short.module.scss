@@ -1,0 +1,51 @@
+@import "../../../sass/_variables";
+
+
+.card-model-short {
+    width: 100%;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+    background: #fff;
+    box-shadow: 0 5px 10px #bdbdbd;
+    border-top: 1px solid $lo-grey;
+
+    .card-model-short__top {
+        width: 100%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    &:hover, &:focus, &:active {
+        box-shadow: 0 5px 10px #524e4e;
+    }
+
+    .card-model-short__img {
+        width: 100%;
+        min-height: 230px;
+        max-height: 230px;
+        position: relative;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-model-short__bottom {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        padding: 0 20px;
+    }
+}

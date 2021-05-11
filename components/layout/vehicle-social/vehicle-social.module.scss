@@ -1,0 +1,44 @@
+@import "../../../sass/_variables";
+
+.vehicle-socials {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 0 0 10px;
+
+        a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $lo-blue;
+            border-radius: 100%;
+
+            &:hover, &:focus, &:active {
+                background: $lo-blue;
+
+                svg {
+                    fill: $white;
+
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+
+            svg {
+                width: 10px;
+                height: 16px;
+                fill: $lo-blue;
+
+                path {
+                    fill: $lo-blue;
+                }
+            }
+        }
+    }
+}

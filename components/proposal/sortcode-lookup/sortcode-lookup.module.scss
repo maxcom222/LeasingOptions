@@ -1,0 +1,80 @@
+﻿@import "../../../sass/_variables";
+
+
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+
+    input, .input-icon {
+        display: inline-flex;
+    }
+
+    input {
+        /*width: 100%;
+        background-color: #f0f0f0;
+        border: 0;
+        padding: 5px 10px;*/
+    }
+
+    .input-icon {
+        background-color: $lo-blue;
+        border: 0;
+        padding: 10px;
+
+        svg {
+            color: #fff;
+        }
+    }
+
+    .input-loading {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 7px;
+        right: 43px;
+        z-index: 2;
+    }
+
+    .input-list {
+        max-height: 350px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: $zindex-dropdown;
+        display: none;
+        background: $white;
+        border: 1px solid #c5c5c5;
+        overflow-y: auto;
+
+        &.is-active {
+            display: block;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: block;
+
+                a {
+                    display: block;
+                    padding: 5px 10px;
+                    font-weight: normal;
+                    color: $lo-body-text;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: $lo-blue;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

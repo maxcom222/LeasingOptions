@@ -1,0 +1,78 @@
+@import "../../../sass/_variables";
+
+
+.aside-accordion {
+    width: 100%;
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 20px;
+    background: $white;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 0 4px #dcdcdc;
+    
+    &.is-active {
+
+        nav {
+            display: block;
+        }
+    }
+
+    h3 {
+        position: relative;
+        margin: 0;
+        padding: 0 35px 10px 0;
+        color: #000;
+        border-bottom: 1px solid #acacac;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: -12px 0 0 0;
+            color: $lo-blue;
+        }
+    }
+
+    nav {
+        display: none;
+        margin: 0 0 10px 0;
+
+        a {
+            display: block;
+            margin: -1px 0 0 0;
+            padding: 10px 0;
+            border-top: 1px solid #acacac;
+            font-weight: 700;
+            color: #000;
+
+            &:last-child a {
+                border-bottom: 1px solid $lo-placeholder;
+            }
+            
+            &:hover, &:focus, &:active, &.is-active {
+                color: $lo-blue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .aside-accordion {
+        margin-bottom: 30px;
+        box-shadow: 0 0 10px 5px #dcdcdc;
+        
+        h3 {
+            font-size: 18px;
+
+            svg {
+                display: none;
+            }
+        }
+
+        nav {
+            display: block!important;
+        }
+    }
+}

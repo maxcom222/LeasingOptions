@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+   .btn {
+      position: relative;
+      max-width: 100%!important;
+      min-width: 260px;
+      display: inline-block;
+      font-weight: 600!important;
+      color: #212529;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: 7px 15px;
+      font-size: 17px;
+      line-height: 1.42857;
+      border-radius: 0.25rem;
+      box-shadow: none!important;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      &:hover, &:focus, &:active {
+          text-decoration: none;
+      }
+
+      a {
+          color: #212529;
+          text-decoration: none;
+
+          &:hover, &:focus, &:active {
+              text-decoration: none;
+          }
+      }
+
+      &.is-active {
+          color: $lo-blue;
+      }
+    
+      /* #Standard Button
+      ==================================================*/
+
+        &.btn-primary {
+            color: $white;
+            background: rgb(66,161,236);
+            background: -moz-linear-gradient(top,  rgb(66,161,236) 0%, rgb(0,112,193) 100%);
+            background: -webkit-linear-gradient(top,  rgb(66,161,236) 0%,rgb(0,112,193) 100%);
+            background: linear-gradient(to bottom,  rgb(66,161,236) 0%,rgb(0,112,193) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42a1ec', endColorstr='#0070c1',GradientType=0 );
+            border: 1px solid #1F7AC6;
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0, 0.1)!important;
+
+            &:hover, &:active, &:focus, &.is-active {
+                    background: rgb(66,161,236);
+                    background: -moz-linear-gradient(top,  rgb(66,161,236) 0%, rgb(42,161,255) 2%, rgb(0,116,203) 100%);
+                    background: -webkit-linear-gradient(top,  rgb(66,161,236) 0%,rgb(42,161,255) 2%,rgb(0,116,203) 100%);
+                    background: linear-gradient(to bottom,  rgb(66,161,236) 0%,rgb(42,161,255) 2%,rgb(0,116,203) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42a1ec', endColorstr='#0074cb',GradientType=0 );
+            }
+
+            a {
+                color: $white;
+            }
+
+            svg {
+                fill: $white!important;
+
+                path {
+                    fill: $white!important;
+                }
+            }
+        }
+
+        &.btn-secondary {
+            color: $white;
+            background: transparent;
+            border: 2px solid $white;
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0, 0.1)!important;
+
+            &:hover, &:active, &:focus {
+                background-color: #F2F2F2;
+                border: 2px solid #248BD8;
+                color: #248BD8;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+      &.btn-dark-grey {
+            background: #606060;
+            background: -moz-linear-gradient(top,#606060 0%,#4d4d4d 100%);
+            background: -webkit-linear-gradient(top,#606060 0%,#4d4d4d 100%);
+            background: linear-gradient(to bottom,#606060 0%,#4d4d4d 100%);
+
+            &:hover, &:active, &:focus {
+                background: #4d4d4d;
+                background: -moz-linear-gradient(top,#4d4d4d 0%,#606060 100%);
+                background: -webkit-linear-gradient(top,#4d4d4d 0%,#606060 100%);
+                background: linear-gradient(to bottom,#4d4d4d 0%,#606060 100%);
+            }
+      }
+
+      &.btn-success {
+          background: linear-gradient(#179500 0%,#158100 100%);
+
+          &:hover, &:active, &:focus {
+            background: linear-gradient(#179500 0%, #179500 100%);
+          }
+      }
+
+      &.btn-black {
+          background: $lo-black;
+          color: $white;
+
+          &:hover, &:active, &:focus {
+            background: $lo-special;
+            color: $white;
+          }
+      }
+      
+      /* #Outline Button
+      ==================================================*/
+
+      &.btn-outline-primary, &.btn-outline-secondary, &.btn-outline-success, &.btn-outline-danger, &.btn-outline-warning, &.btn-outline-info, &.btn-outline-light, &.btn-outline-dark, &.btn-outline-link {
+
+          &:hover, &:active, &:focus {
+              box-shadow: none;
+          }
+      }
+
+      &.btn-outline-primary {
+          background: transparent;
+          color: #0288b5;
+          border-color: #0288b5;
+
+          &:hover, &:active, &:focus {
+              background: linear-gradient(#0094c6 0%,#0288b5 100%);
+              color: #fff;
+              border-color: #0288b5;
+
+              svg {
+                fill: $white;
+
+                path {
+                    fill: $white;
+                }
+              }
+          }
+
+          a {
+            color: #0288b5;
+          }
+      }
+
+      &.btn-outline-secondary {
+          background: transparent;
+          color: #6c757d;
+          border-color: #6c757d;
+
+          &:hover, &:active, &:focus {
+              background-color: #6c757d;
+              color: #fff;
+              border-color: #6c757d;
+          }
+
+          a {
+            color: #6c757d;
+          }
+      }
+
+      &.btn-outline-black {
+        background: transparent;
+        color: $lo-black;
+        border-color: $lo-black;
+
+        svg {
+            fill: $lo-blue;
+
+            path {
+                fill: $lo-blue; 
+            }
+        }
+
+        &:hover, &:active, &:focus {
+            background: transparent;
+            border-color: $lo-blue;
+        }
+
+        a {
+          color: $lo-black;
+        }
+    }
+
+      /* #Icon Button
+      ==================================================*/
+      &.btn-labeled {
+          padding-left: 50px;
+
+          .btn-label {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 15px;
+
+              svg {
+                  color: inherit;
+              }
+          }
+
+          &.btn-labeled--right {
+            padding-left: 0.5rem!important;
+            padding-right: 50px;
+
+            .btn-label {
+                left: auto;
+                right: 0;
+            }
+          }
+
+          &.btn-labeled--rotate {
+
+            .btn-label svg {
+                transform: rotate(-180deg);
+            }
+          }
+
+          &.btn-lg {
+            padding-left: 50px;
+          }
+
+          &.btn-sm {
+              padding-left: 40px;
+
+              .btn-label {
+                  padding: 5px 10px;
+              }
+          }
+      }
+
+      /* #Wrapper Button
+      ==================================================*/
+      &.btn-wrapper {
+          min-width: auto;
+          max-width: 100%;
+          position: relative;
+          background:transparent;
+          border:0;
+          margin: 0;
+          padding:0;
+      }
+      
+      /* #Fluid Button
+      ==================================================*/
+      &.btn-fluid {
+          min-width: 1px;
+      }
+
+      &.btn-fluid-xs {
+          width: 100%;
+          min-width: auto;
+      }
+
+      
+      /* #Block Button
+      ==================================================*/
+      &.btn-block {
+          min-width: 100%;
+      }
+
+      &.btn-block-xs {
+          width: 100%;
+          display: block;
+      }
+      
+      /* Condensed buttons
+      ==================================================*/
+      &.btn-condensed {
+          padding: 7px 10px;
+      }
+
+      /* Text only button
+      ==================================================*/
+      &.btn-text {
+            display: inline;
+            min-width: 1px;
+            margin: 0;
+            padding: 0;
+            text-decoration: underline;
+            font-size: inherit;
+            vertical-align: initial;
+      }
+
+      /* Large buttons
+      ==================================================*/
+      &.btn-lg {
+        //   padding: 7px 15px;
+        //   font-size: 0.86rem;
+        //   line-height: 1.42857;
+        //   border-radius: 0.25rem;
+
+          padding: 0.5rem 1rem;
+          font-size: 1.075rem;
+          line-height: 1.5;
+          border-radius: 0.3rem;
+      }
+
+      /* Square buttons
+      ==================================================*/
+      &.btn-square {
+          border-radius: 0!important;
+      }
+
+      /* Back Friday buttons
+      ==================================================*/
+      &.btn-bf {
+          color: #fff;
+          border-color: #980000;
+          background-color: #000;
+
+          &:hover {
+            color: #fff;
+            background-color: #313131;
+            transition-delay: 0.1s;
+          }
+      }
+
+        
+
+      /* #Option Button
+      ==================================================*/
+
+      &.btn-option {
+        color: $lo-black;
+        background: #D6D6D6;
+        border-color: #D6D6D6;
+        box-shadow: none;
+
+        &:hover, &:active, &:focus {
+            background: linear-gradient(#02a1d8 0%,#02a1d8 100%);
+        }
+
+        &.is-active {
+            background-color: #0094c6;
+            border-color: #0094c6;
+            box-shadow: 0px 3px 6px rgba(31, 146, 180, 0.4)!important;
+            color: $white;
+
+            a {
+                color: $white;
+            }
+        }
+
+        a {
+            color: $lo-black;
+        }
+
+        svg {
+          fill: $white!important;
+
+          path {
+              fill: $white!important;
+          }
+        }
+    }
+  }
+
+  @media (min-width: 375px) {
+      .btn {
+          &.btn-condensed {
+              padding: 7px 15px;
+          }
+      }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    .btn {
+        &.btn-block-xs {
+            width: auto;
+            display: inline-block;
+        }
+
+        &.btn-fluid-xs {
+            width: auto;
+            min-width: 260px;
+        }
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+      .btn {
+          &.btn-lg, &.btn-lg-md {
+            padding: 0.5rem 1rem;
+            font-size: 1.075rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+          }
+      }
+  }

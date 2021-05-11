@@ -1,0 +1,47 @@
+@import "../../../sass/_variables";
+
+.page-table {
+
+    .row {
+        border-bottom: 1px solid #d7d7d7;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    .page-table__text {
+        font-size: 10px;
+    }
+
+    .bg-grey {
+        background-color: #f2f2f2;
+        padding: 15px;
+        font-weight: bold;
+
+        svg {
+            width: 20px;
+        }
+    }
+
+    .bg-blue, .bg-atc-table {
+        background-color: #026299;
+        padding: 15px;
+        font-weight: bold;
+        color: $white;
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+
+    .page-table {
+
+        .page-table__text {
+            font-size: 16px;
+        }
+    }
+}

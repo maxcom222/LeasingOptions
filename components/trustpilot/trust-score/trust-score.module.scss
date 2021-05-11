@@ -1,0 +1,48 @@
+@import "../../../sass/variables";
+
+
+.trust-score {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    
+    .trust-score__logo {
+        position: relative;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $tp-green;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 5px;
+
+        img {
+            width: 60px;
+            height: 20px;
+        }
+    }
+
+    .trust-score__reviews {
+        position: relative;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border: 1px solid rgba(25,25,25,0.2);
+        border-bottom-right-radius: 5px;
+        border-left: none;
+        border-top-right-radius: 5px;
+        color: rgba(25,25,25,0.6);
+        font-size: 12px;
+        padding: 5px;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .trust-score {
+        display: none;
+    }
+}

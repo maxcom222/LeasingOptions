@@ -1,0 +1,14 @@
+
+@import "../../../sass/_variables";
+
+
+.card-electric {
+    width: calc(100% - 20px);
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 20px 10px;
+
+    h4, span, strong {
+        color: $lo-black;
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../sass/_variables";
+
+
+.vehicle-info {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background: $white;
+    box-shadow: 0 5px 10px $lo-shadow;
+    
+    .vehicle-info__header {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        background: $white;
+        padding: 15px;
+        box-shadow: 0 1px 3px 0px $lo-shadow;
+    }
+
+    .vehicle-info__content {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        background: $white;
+        padding: 15px;
+
+        label {
+            font-weight: 700;
+
+            span {
+                color:#009892;
+            }
+        }
+
+        svg {
+
+            path {
+                fill: $lo-blue;
+            }
+        }
+    }
+}

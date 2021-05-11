@@ -1,0 +1,110 @@
+@import "../../../sass/_variables";
+
+
+/*  ==========================================================================
+    Deal selector
+    ========================================================================== */
+
+    .deal-selector {
+        height: 30px;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        &.deal-selector--light {
+
+            span {
+                color: $white;
+            }
+        }
+
+        &.deal-selector--hidden {
+            display: none;
+        }
+
+        div {
+            width: 40px;
+            height: 20px;
+            display: inline-flex;
+        }
+
+        span {
+            height: 20px;
+            display: inline-flex;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #000;
+            cursor: pointer;
+
+            span {
+                display: inline-block;
+                margin: 0 0 0 5px;
+            }
+
+            &.business {
+                margin: 0 10px 0 0;
+            }
+
+            &.personal {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        input[type=checkbox]{
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+        
+        label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 40px;
+            height: 20px;
+            background: #1D5A7F;
+            display: block;
+            border-radius: 100px;
+            position: relative;
+            margin: 0;
+        }
+        
+        label:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border-radius: 9px;
+            transition: 0.3s;
+        }
+        
+        input:checked + label {
+            background: #009891;
+        }
+        
+        input:checked + label:after {
+            left: 50%;
+        }
+    }
+
+    @media screen and (min-width: $screen-md) {
+        .deal-selector {
+            height: 36px;
+
+            &.deal-selector--hidden {
+                display: flex;
+            }
+
+            span {
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }

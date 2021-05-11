@@ -1,0 +1,79 @@
+@import "../../../sass/_variables";
+
+
+.faq-list {
+    position: relative;
+
+    .faq-list__item {
+        position: relative;
+
+        .faq-list__title {
+            padding: 0 40px 0 15px;
+            text-transform: capitalize;
+            position: relative;
+            cursor: pointer;
+            margin: 0 0 10px;
+            overflow: hidden;
+            color: #fff;
+            border-left: 10px solid #E5E5E5;
+            border-right: 10px solid #E5E5E5;
+            background: #045b61; /* Old browsers */
+            background: -moz-linear-gradient(left, #045b61 0%, #0c8c91 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #045b61 0%,#0c8c91 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #045b61 0%,#0c8c91 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#045b61', endColorstr='#0c8c91',GradientType=1 ); /* IE6-9 */
+        
+            p {
+                line-height: 50px;
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+                color: #fff;
+            }
+        
+            .faq-list__icon {
+                width: 50px;
+                height: 50px;
+                float: left;
+                margin-right: 25px;
+
+                img {
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                margin-top: -10px;
+                fill: $white;
+
+                path {
+                    fill: $white; 
+                }
+            }
+        }
+
+        .faq-list__content {
+            padding: 15px;
+            overflow: hidden;
+            background-color: #f4f4f4;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #afafaf;
+
+            p {
+                text-align: left;
+                font-size: 15px;
+                line-height: 22px;
+                font-weight: 400;
+                color: #000;
+            }
+        }
+    }
+}

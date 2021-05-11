@@ -1,0 +1,164 @@
+@import "../../../sass/_variables";
+
+.account-box {
+    width: 100%;
+    position: relative;
+
+    .account-box__header {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 40px 10px 15px;
+        cursor: pointer;
+        color: $white;
+        font-size: 14px; 
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        user-select: none;
+        background-color: $lo-charcoal;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px 0 0;
+        }
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            margin: -10px;
+            content: "+";
+        }
+    }
+
+    .account-box__content {
+        width: 100%;
+        position: relative;
+        display: none;
+        padding: 15px;
+        background: $lo-background;
+        border: 15px solid $white;
+        user-select: none;
+
+        .account-box__dd {
+            width: 100%;
+            height: 60px;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px; 
+            font-weight: bold;
+            border: 1px solid $lo-charcoal;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ececec+0,cccccc+100 */
+            background: rgb(236,236,236); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(236,236,236,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(236,236,236,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(236,236,236,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+    
+            &.is-active {
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cccccc+0,ececec+100 */
+                background: rgb(204,204,204); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(204,204,204,1) 0%, rgba(236,236,236,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(204,204,204,1) 0%,rgba(236,236,236,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(204,204,204,1) 0%,rgba(236,236,236,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    
+    
+                span svg {
+                    transform: rotate(-180deg);
+                }
+            }
+    
+    
+            span {
+                width: 100%;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+            }
+    
+            ul {
+                position: absolute;
+                top: 100%;
+                left: -1px;
+                right: -1px;
+                z-index: 9999;
+                margin: 0;
+                padding: 0;
+                background-color: $white;
+                border: solid 1px $lo-charcoal;
+                border-bottom: 0;
+                border-top: none;
+                overflow: auto;
+                box-shadow: 0px 2px 20px 5px rgba(170,170,170,1);
+    
+                li {
+                    padding: 10px 15px;
+                    display: block;
+                    border-bottom: solid 1px $lo-charcoal;
+                    color: $text-color;
+                    overflow: hidden;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: all 0.25s ease-in-out;
+                    user-select: none;
+    
+                    &:hover, &.is-active {
+                        background: $mid-grey;
+                    }
+    
+                    &:first-child {
+                        border-top: solid 1px $lo-charcoal;
+                    }
+                }
+            }
+    
+            img {
+                max-height: 45px;
+                max-width: 45px;
+                margin: 0 15px 0 0;
+            }
+    
+            label {
+                width: 100%;
+                display: inline;
+                margin: 0 0;
+                padding: 0 0;
+                font-size: 14px;
+            }
+    
+            small {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 85%;
+                font-weight: normal;
+                line-height: 1.4em;
+                color: inherit;
+            }
+        }
+    }
+
+    &.is-active {
+
+        .account-box__header:after {
+            content: "-";
+        }
+        .account-box__content {
+            display: block;
+        }
+    }
+}

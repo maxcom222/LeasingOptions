@@ -1,0 +1,33 @@
+﻿.marketing {
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0094C6;
+        padding: 15px 0;
+        border-bottom: 2px solid #f7f7f7;
+        margin: 0 0 15px 0;
+    }
+
+    .highlight,
+    span,
+    a {
+        color: #0094C6;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .checkboxes {
+        label {
+            margin-bottom: 0 !important;
+            font-size: 0.8rem;
+        }
+
+        input[type=checkbox] {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}

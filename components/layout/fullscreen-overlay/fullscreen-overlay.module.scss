@@ -1,0 +1,39 @@
+@import "../../../sass/_variables";
+
+.fullscreen-overlay {  
+    position: relative;
+    
+    &.is-active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $zindex-fullscreen;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .fullscreen-overlay__close {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: $zindex-fullscreen;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: red;
+
+            path {
+                fill: red;
+            }
+        }
+    }
+}

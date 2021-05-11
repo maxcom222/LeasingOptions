@@ -1,0 +1,31 @@
+@import "../../../sass/_variables";
+
+
+.internal-quote {
+    position: relative;
+    margin-bottom: 15px;
+
+    &.is-active {
+
+        .internal-quote__info {
+            display: block;
+        }
+    }
+
+    .internal-quote__header {
+        position: relative;
+        padding: 15px;
+        font-weight: 500;
+        background-color: $lo-blue;
+        color: $white;
+        cursor: pointer;
+    }
+
+    .internal-quote__info {
+        position: relative;
+        display: none;
+        padding: 8px;
+        background: $light-grey;
+        border: 1px solid $lo-blue;
+    }
+}

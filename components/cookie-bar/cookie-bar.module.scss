@@ -1,0 +1,48 @@
+@import "../../sass/_variables";
+
+.cookie-bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-cta-bar;
+    padding: 50px 20px;
+    font-size: 12px;
+    color: $white;
+    background: rgba(0,0,0,0.8);
+
+    a {
+        font-weight: normal!important;
+        color: $white;
+        text-decoration: underline;
+    }
+
+    .cookie-bar__btn {
+        margin: 20px 0 0 0;
+        border: 0;
+        font-weight: normal!important;
+        background: #0057C8;
+        color: $white;
+
+        &:hover, &:focus {
+            background: darken(#0057C8, 5%);
+            color: $white;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .cookie-bar {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .cookie-bar {
+        padding: 15px;
+
+        .cookie-bar__btn {
+            margin: 0;
+        }
+    }
+}

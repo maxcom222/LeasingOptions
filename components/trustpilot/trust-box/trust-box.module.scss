@@ -1,0 +1,89 @@
+@import "../../../sass/variables";
+
+
+.trust-box {
+    width: 100%;
+    position: relative;
+
+    .trust-box__logo {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+
+        img {
+            width: 140px;
+            height: 26px;
+            display: inline-block;
+            margin: 0 0 0 10px;
+        }
+    }
+
+    .trust-box__rating {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 30px 0;
+        text-align: center;
+        color: #1f2936;
+        font-size: 13px;
+
+        strong {
+            display: inline-block;
+            margin: 0 2px;
+            font-weight: 700;
+        }
+
+        span {
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        a {
+            display: inline-block;
+            color: #1f2936;
+            font-size: 13px;
+        }
+
+        img {
+            width: 80px;
+            height: 20px;
+            margin: 0 0 0 3px;
+        }
+    }
+
+    .trust-box__reviews {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .trust-box__review {
+            max-width: 100%;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .trust-box {
+        margin-left: -10px;
+        
+        .trust-box__reviews {
+            max-height: 300px;
+            overflow-y: auto;
+    
+            .trust-box__review {
+                padding-left: 10px;
+            }
+        }
+    }
+}

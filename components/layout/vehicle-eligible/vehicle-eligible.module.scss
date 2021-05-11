@@ -1,0 +1,157 @@
+@import "../../../sass/_variables";
+
+
+/*  ==========================================================================
+    Vehicle Eligible
+    ========================================================================== */
+
+    .vehicle-eligible {
+        width: 100%;
+        position: relative;
+        border: 1px solid #0094C6;
+        padding: 15px 15px 0 15px;
+    
+        &.vehicle-eligible--landing {
+            border: 1px solid $white;
+    
+            .vehicle-eligible__block {
+    
+                h3, h3 a, svg, p {
+                    color: $white;
+                }
+
+                p {
+                    font-size: 100%;
+                }
+
+                form {
+                    position: relative;
+                    margin-bottom: 15px;
+
+                    button {
+                        background: #18AF3A;
+                    }
+                }
+    
+                .btn-primary {
+                    background: #18AF3A;
+                    border-color: #18AF3A;
+                }
+    
+                .btn-outline-secondary {
+                    border: 1px solid $white;
+                    color: $white;
+    
+                    &:hover {
+                        background: $white;
+                        color: #0094C6;
+                    }
+                }
+            }
+        }
+    
+        .vehicle-eligible__block {
+            width: 100%;
+            position: relative;
+    
+            h3 {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 0;
+                color: #000;
+    
+                span {
+                    display: inline-flex;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 10px 0 0 0;
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: #000;
+                    cursor: pointer;
+    
+                    svg {
+                        font-size: 20px;
+                        display: inline-block;
+                        margin: 0 10px 0 0;
+                        text-decoration: none;
+                        fill: $white;
+                    }
+                }
+            }
+    
+            p {
+                width: 100%;
+                max-width: 100%;
+                position: relative;
+                display: block;
+                margin: 30px 0 10px 0;
+                color: #000;
+
+                span {
+                    font-size: inherit;
+                    color: red;
+                }
+            }
+    
+            form {
+                width: 100%;
+                position: relative;
+    
+                input {
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                    padding: 10px;
+                    background: $white;
+                    border: 1px solid #BFBFBF;
+
+                    &.required {
+                        border: 1px solid red;
+                    }
+                }
+    
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    background: #0094C6;
+                    border: 0;
+                    padding: 10px 18px;
+    
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (min-width: $screen-md) {
+        .vehicle-eligible {
+    
+            .vehicle-eligible__block {
+    
+                h3 {
+    
+                    span {
+                        margin: 0 0 0 15px;
+                    }
+                }
+    
+                p {
+                    margin: 15px 0 10px 0;
+                }
+    
+                button {
+                    width: auto;
+                }
+            }
+        }
+    }

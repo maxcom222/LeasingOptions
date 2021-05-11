@@ -1,0 +1,79 @@
+@import "../../../sass/_variables";
+
+
+.breadcrumbs {
+    width: 100%;
+    position: relative;
+
+    &.breadcrumbs--absolute {
+
+        &.breadcrumbs--white {
+            ol {
+        
+                li {
+        
+                    &.is-active {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        
+        ol {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            right: 15px;
+            z-index: 2;
+
+            li {
+
+                &:after {
+                    color: $white;
+                }
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    ol {
+        padding: 15px 0;
+        margin: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            font-weight: 700;
+
+            &:after {
+                content: ">";
+                margin: 0 0 0 10px;
+                color: #888888;
+            }
+
+            &.is-active {
+                color: $lo-blue;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            a {
+                font-weight: 700;
+                color: #888888;
+                text-decoration: none;
+
+                &:hover {
+                    color: $lo-blue;
+                }
+            }
+        }
+    }
+}

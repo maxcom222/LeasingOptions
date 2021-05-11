@@ -1,0 +1,31 @@
+@import "../../../sass/_variables";
+
+
+.faq-results {
+    background: $white;
+    margin: 15px 0 50px 0;
+
+    .faq-result {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #a9a8a8;
+    }
+
+    h3 {
+        color: $lo-black;
+        font-size: 100%;
+        font-weight: 700;
+        padding: 0 0 12px;
+    }
+
+    p {
+        color: $lo-black;
+    }
+
+    .expand-btn {
+        cursor: pointer;
+        color: #a9a8a8;
+        font-size: 13px;
+        padding-left: 6px;
+    }
+}

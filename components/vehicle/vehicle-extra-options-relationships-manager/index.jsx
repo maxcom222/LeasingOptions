@@ -1,0 +1,1 @@
+export { default } from './vehicle-extra-options-relationships-manager';

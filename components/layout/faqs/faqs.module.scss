@@ -1,0 +1,75 @@
+@import "../../../sass/_variables";
+
+
+.faqs {
+
+    .faqs__item {
+        width: 100%;
+        position: relative;
+        background: $white;
+        border: 1px solid #e6e6e6;
+        margin: 0 0 10px 0;
+
+        &.is-active {
+
+            .faqs__title {
+                color: #0094c6;
+            }
+
+            .faqs__content {
+                display: block;
+            }
+        }
+    }
+
+    .faqs__title {
+        width: 100%;
+        position: relative;
+        display: block;
+        padding: 10px 40px 10px 10px;
+        font-weight: 700;
+        color: #000;
+        text-align: left;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+
+        &:hover, &:focus, &:active {
+            color: #0094c6;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin: -11px 0 0 0;
+            font-size: 25px;
+            color: #0094c6;
+        }
+    }
+
+    .faqs__content {
+        width: 100%;
+        position: relative;
+        display: none;
+        padding: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .faqs {
+    
+        .faqs__title {
+            padding: 10px 70px 10px 40px;
+            border-color: #d7d7d7;
+
+            svg {
+                right: 40px;
+            }
+        }
+    
+        .faqs__content {
+            padding: 10px 40px;
+        }
+    }
+}

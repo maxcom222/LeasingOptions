@@ -1,0 +1,16 @@
+@import "../../../sass/_variables";
+
+.vehicle-box {
+    position: relative;
+
+    .vehicle-box_expired {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        background: /* On "top" */ repeating-linear-gradient( 45deg, transparent, transparent 4px, rgba(38, 38, 38, 0.5) 10px, rgba(39, 38, 38, 0.9) 10px ), /* on "bottom" */ linear-gradient( to bottom, rgba(0, 0, 0, 1), $lo-black );
+        opacity: 0.5;
+    }
+}

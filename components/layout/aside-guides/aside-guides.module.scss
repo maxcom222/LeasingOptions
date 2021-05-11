@@ -1,0 +1,226 @@
+@import "../../../sass/_variables";
+
+
+.aside-guides {
+    width: 100%;
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 20px;
+    background: $white;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 0 4px #dcdcdc;
+
+    .aside-guides__accordion{
+        position: relative;
+
+        &.is-active {
+            & > nav {
+                display: block;
+            }
+
+            & > .aside-guides__manufacturer {
+
+                select {
+                    display: block;
+                }
+            }
+        }
+
+        &.aside-guides__accordion--latest-news {
+            & > nav a.is-active:before {
+                border-color: transparent transparent transparent $lo-purple;
+            }
+        }
+
+        &.aside-guides__accordion--vehicle-reviews {
+            & > nav a.is-active:before {
+                border-color: transparent transparent transparent $lo-pink;
+            }
+        }
+
+        &.aside-guides__accordion--blog {
+            & > nav a.is-active:before {
+                border-color: transparent transparent transparent $lo-navy;
+            }
+        }
+
+        &.aside-guides__accordion--blog {
+            & > nav a.is-active:before {
+                border-color: transparent transparent transparent $lo-royal;
+            }
+        }
+
+        h3 {
+            position: relative;
+            margin: 0;
+            padding: 0 35px 10px 0;
+            color: #000;
+            border-bottom: 1px solid $lo-placeholder;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin: -12px 0 0 0;
+                color: $lo-blue;
+            }
+        }
+
+        & > nav {
+            margin: 0 0 10px 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+
+            a {
+                display: block;
+                margin: -1px 0 0 0;
+                padding: 10px 0;
+                border-top: 1px solid $lo-placeholder;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000;
+
+                &:hover {
+                    color: $lo-blue;
+                }
+
+                &.is-active {
+                    position: relative;
+                    padding-left: 20px;
+
+                    &:before {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 12px;
+                        left: 0;
+                        border-style: solid;
+                        border-width: 7px 0 7px 14px;
+                        border-color: transparent transparent transparent $lo-default;
+                    }
+                }
+
+                &:last-child  {
+                    border-bottom: 1px solid $lo-placeholder;
+                }
+            }
+        }
+
+        .aside-guides__manufacturer {
+            position: relative;
+            margin: 30px 0 10px 0;
+
+            select {
+                width: 100%;
+                height: 40px;
+                margin: 0 0 10px 0;
+                padding: 5px 10px;
+                border: 1px solid $lo-placeholder;
+                background: $lo-background;
+                font-weight: 700;
+                border-radius: 0 !important;
+                display: none;
+            }
+        }
+    }
+
+    .aside-guides__social {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        display: none;
+
+        h3 {
+            margin: 0;
+            padding: 0 0 10px 0;
+            color: $lo-black;
+            border: 0;
+        }
+
+        & > nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                display: inline-block;
+                padding: 10px 0;
+
+                &:hover {
+
+                    svg {
+                        fill: $lo-blue;
+
+                        path {
+                            fill: $lo-blue;
+                        }
+                    }
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: $lo-placeholder;
+
+                    path {
+                        fill: $lo-placeholder;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .aside-guides {
+        padding-bottom: 140px;
+        box-shadow: 0 0 10px 5px #dcdcdc;
+
+        h3 {
+
+            svg {
+                display: none!important;
+            }
+        }
+
+        .aside-guides__accordion {
+
+            & > nav {
+                display: block !important;
+            }
+
+            .aside-guides__manufacturer {
+                display: block !important;
+
+                select {
+                    display: block;
+                }
+            }
+        }
+
+        .aside-guides__social {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .aside-guides {
+        margin-bottom: 0;
+        padding-bottom: 120px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+}

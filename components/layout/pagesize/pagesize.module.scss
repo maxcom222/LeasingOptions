@@ -1,0 +1,44 @@
+@import "../../../sass/variables";
+
+
+.pagesize {
+
+    p {
+        margin: 0 10px 0 0;
+        color: #3A3B3A;
+        line-height: 38px;
+        font-weight: 700;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+
+        li {
+            display: inline-block;
+            margin: 0 2px;
+            padding: 0;
+            
+
+            button {
+                width: 40px;
+                height: 40px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #E0E0E0;
+                color: #3A3B3A;
+                font-weight: 700;
+                border-radius: 50px;
+                text-decoration: none;
+                border: 0;
+
+                &:hover, &:focus, &:active, &.active {
+                    background: $lo-atc;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

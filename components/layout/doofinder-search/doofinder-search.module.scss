@@ -1,0 +1,123 @@
+@import "../../../sass/_variables";
+
+
+.doofinder-block {
+    width: 100%;
+    position: relative;
+    background: $lo-navbar;
+    border-radius: 5px;
+    box-shadow: 0 4px 2px #191919;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #777777;
+
+        li {
+            display: inline-block;
+            width: 50%;
+
+            button {
+                margin: 0 0 -1px 0!important;
+                padding: 15px 30px!important;
+                color: #777777;
+                text-decoration: none!important;
+                border-bottom: 1px solid transparent;
+
+                &.is-selected, &:hover, &:focus {
+                    color: $white;
+                    border-bottom: 1px solid $lo-blue;
+                }
+            }
+        }
+    }
+
+    .doofinder-block__input {
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .doofinder-block {
+
+        .doofinder-block__input {
+            padding: 50px 50px;
+        }
+    }
+}
+
+.input-wrapper {
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: opacity .2s ease-in-out;
+
+    input, .input-icon {               
+        display: inline-flex;
+    }
+
+    input {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        background-color: #EFF3F5;
+        border: 0;
+        padding: 10px 15px 10px 35px;
+        outline: none;
+        transition: all 0.5s ease;
+        font-size: 14px;
+        font-style: italic;
+        color: #6A6A6B;
+        text-align: center;
+        border-radius: 5px;
+
+        &:focus {
+            border-left: 5px solid $primary;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #6A6A6B !important;
+        }
+
+        &::-moz-placeholder {
+            color: #6A6A6B !important;
+        }
+
+        &:-ms-input-placeholder {
+            color: #6A6A6B !important;
+        }
+
+        &:-moz-placeholder {
+            color: #6A6A6B !important;
+        }
+    }
+
+    .input-icon {
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        z-index: 3;
+        background-color: transparent;
+        border: 0;
+        
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: #6A6A6B;
+
+            path {
+                fill: #6A6A6B;
+            }
+        }
+    }
+
+    .input-loading {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 7px;
+        right: 43px;
+        z-index: 2;
+    }
+}
